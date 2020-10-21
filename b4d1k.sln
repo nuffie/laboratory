@@ -38,7 +38,7 @@ Global
 		{0C26F2E6-BF99-4BE4-9E1C-006BC19F5091}.Release|Mixed Platforms.Build.0 = Release|Win32
 		{0C26F2E6-BF99-4BE4-9E1C-006BC19F5091}.Release|Win32.ActiveCfg = Release|Win32
 		{0C26F2E6-BF99-4BE4-9E1C-006BC19F5091}.Release|Win32.Build.0 = Release|Win32
-		{0C26F2E6-BF99-4BE4-9E1C-006BC19F5091}.Release|x64.ActiveCfg = Release|Win32
+		{0C26F2E6-BF99-4BE4-9E1C-006BC19F5091}.Release|x64.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

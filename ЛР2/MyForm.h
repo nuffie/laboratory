@@ -100,7 +100,7 @@ public:
 		this->button1->Name = L"button1";
 		this->button1->Size = System::Drawing::Size(150, 38);
 		this->button1->TabIndex = 0;
-		this->button1->Text = L"Вычислить";
+		this->button1->Text = L"Р’С‹С‡РёСЃР»РёС‚СЊ";
 		this->button1->UseVisualStyleBackColor = false;
 		this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 		// 
@@ -274,7 +274,7 @@ public:
 		this->label1->Name = L"label1";
 		this->label1->Size = System::Drawing::Size(231, 25);
 		this->label1->TabIndex = 17;
-		this->label1->Text = L"Лабораторная работа #1";
+		this->label1->Text = L"Р›Р°Р±РѕСЂР°С‚РѕСЂРЅР°СЏ СЂР°Р±РѕС‚Р° #2";
 		// 
 		// task
 		// 
@@ -284,8 +284,8 @@ public:
 		this->task->Name = L"task";
 		this->task->Size = System::Drawing::Size(400, 60);
 		this->task->TabIndex = 17;
-		this->task->Text = L"Задание:\r\nСоздать проект, вычисляющий P и S по трём заданным \r\nкоординатам треуго"
-			L"льника.\r\n";
+		this->task->Text = L"Р—Р°РґР°РЅРёРµ:\r\nРЎРѕР·РґР°С‚СЊ РїСЂРѕРµРєС‚, РІС‹С‡РёСЃР»СЏСЋС‰РёР№ P Рё S РїРѕ С‚СЂС‘Рј Р·Р°РґР°РЅРЅС‹Рј \r\nРєРѕРѕСЂРґРёРЅР°С‚Р°Рј С‚СЂРµСѓРіРѕ"
+			L"Р»СЊРЅРёРєР°.\r\n";
 		// 
 		// label4
 		// 
@@ -328,7 +328,7 @@ public:
 		this->about->Name = L"about";
 		this->about->Size = System::Drawing::Size(128, 25);
 		this->about->TabIndex = 18;
-		this->about->Text = L"О программе";
+		this->about->Text = L"Рћ РїСЂРѕРіСЂР°РјРјРµ";
 		this->about->Click += gcnew System::EventHandler(this, &MyForm::about_Click);
 		// 
 		// MyForm
@@ -368,7 +368,7 @@ public:
 		this->Name = L"MyForm";
 		this->ShowIcon = false;
 		this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-		this->Text = L"Лабораторная работа #1";
+		this->Text = L"Р›Р°Р±РѕСЂР°С‚РѕСЂРЅР°СЏ СЂР°Р±РѕС‚Р° #1";
 		this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 		this->panel1->ResumeLayout(false);
 		this->panel1->PerformLayout();
@@ -414,7 +414,7 @@ public:
 
 		check = 0;
 
-		// Проверка всех полей на заполненность
+		// РџСЂРѕРІРµСЂРєР° РІСЃРµС… РїРѕР»РµР№ РЅР° Р·Р°РїРѕР»РЅРµРЅРЅРѕСЃС‚СЊ
 		check_TB(textBox1);
 		check_TB(textBox2);
 		check_TB(textBox3);
@@ -423,9 +423,9 @@ public:
 		check_TB(textBox6);
 
 		if (check > 0)
-			MessageBox::Show("Обнаружена ошибка в вводимых данных. \nОшибочные поля будут заполнены нулями");
+			MessageBox::Show("РћР±РЅР°СЂСѓР¶РµРЅР° РѕС€РёР±РєР° РІ РІРІРѕРґРёРјС‹С… РґР°РЅРЅС‹С…. \nРћС€РёР±РѕС‡РЅС‹Рµ РїРѕР»СЏ Р±СѓРґСѓС‚ Р·Р°РїРѕР»РЅРµРЅС‹ РЅСѓР»СЏРјРё");
 
-		// получение всех координат
+		// РїРѕР»СѓС‡РµРЅРёРµ РІСЃРµС… РєРѕРѕСЂРґРёРЅР°С‚
 		double X1, X2, X3, Y1, Y2, Y3;
 		double number = 0.f;
 
@@ -440,7 +440,7 @@ public:
 		if (System::Double::TryParse(textBox6->Text, number)) { Y3 = number; number = 0.f; error++; }
 
 		if (error != 6)
-			MessageBox::Show("Обнаружена ошибка в вводимых данных. \nОшибочные поля будут заполнены нулями");
+			MessageBox::Show("РћР±РЅР°СЂСѓР¶РµРЅР° РѕС€РёР±РєР° РІ РІРІРѕРґРёРјС‹С… РґР°РЅРЅС‹С…. \nРћС€РёР±РѕС‡РЅС‹Рµ РїРѕР»СЏ Р±СѓРґСѓС‚ Р·Р°РїРѕР»РЅРµРЅС‹ РЅСѓР»СЏРјРё");
 
 		CPoint A(X1, Y1), B(X2, Y2), C(X3, Y3);
 
@@ -504,6 +504,6 @@ public:
 	}
 
 	System::Void about_Click(System::Object^  sender, System::EventArgs^  e) {
-		MessageBox::Show("Задание выполнил : \nb4d1k", "Подробнее о работе");
+		MessageBox::Show("Р—Р°РґР°РЅРёРµ РІС‹РїРѕР»РЅРёР» : \nb4d1k", "РџРѕРґСЂРѕР±РЅРµРµ Рѕ СЂР°Р±РѕС‚Рµ");
 	}
 };
