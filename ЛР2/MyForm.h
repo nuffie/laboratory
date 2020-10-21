@@ -26,7 +26,6 @@ public:
 		set_bg();
 	}
 
-protected:
 	~MyForm()
 	{
 		if (components)
@@ -47,29 +46,18 @@ private:
 	System::Windows::Forms::Label^  task;
 	System::Windows::Forms::Label^  descr;
 	System::Windows::Forms::Label^  about;
-
-
-private: System::Windows::Forms::TextBox^  textBox3;
-private: System::Windows::Forms::Label^  label6;
-
-
-
-
+	System::Windows::Forms::TextBox^  textBox3;
+	System::Windows::Forms::Label^  label6;
 	System::Windows::Forms::Label^  label1;
 	System::Windows::Forms::Label^  label4;
-private: System::Windows::Forms::Label^  label7;
-
-
-
+	System::Windows::Forms::Label^  label7;
 	System::Windows::Forms::Label^  label8;
-
-private: System::Windows::Forms::ListBox^  listBox1;
-private: System::Windows::Forms::TextBox^  textBox5;
-private: System::Windows::Forms::Label^  label5;
-private: System::Windows::Forms::Label^  label9;
-private: System::Windows::Forms::TextBox^  textBox4;
-
-		 System::ComponentModel::IContainer^  components;
+	System::Windows::Forms::ListBox^  listBox1;
+	System::Windows::Forms::TextBox^  textBox5;
+	System::Windows::Forms::Label^  label5;
+	System::Windows::Forms::Label^  label9;
+	System::Windows::Forms::TextBox^  textBox4;
+	System::ComponentModel::IContainer^  components;
 
 public:
 	void InitializeComponent(void)
@@ -363,6 +351,7 @@ public:
 		this->Controls->Add(this->label3);
 		this->Controls->Add(this->label2);
 		this->Controls->Add(this->button1);
+
 		this->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 			static_cast<System::Byte>(204)));
 		this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
@@ -456,11 +445,6 @@ public:
 	double Fx(double x, double n)
 	{
 		return (pow(-1, n + 1) * pow(x, 2 * n + 1) * (2 * n + 1)) / (x*(4 * pow(n,2) - 1));
-	}
-
-	void Iteration()
-	{
-
 	}
 
 	System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {

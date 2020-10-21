@@ -1,9 +1,6 @@
-﻿Сборка начата 21.10.2020 22:28:37.
+﻿Сборка начата 22.10.2020 0:43:15.
      1>Проект "C:\Users\B4D1K\Documents\GitHub\laboratory\ЛР2\ЛР2.vcxproj" в узле 2 (целевые объекты Build).
-     1>ClCompile:
-         F:\Visual Studio\VC\bin\x86_amd64\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /O2 /D WIN32 /D NDEBUG /D _UNICODE /D UNICODE /EHa /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Release\\" /Fd"x64\Release\vc120.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /errorReport:prompt /clr:nostdlib MyForm.cpp
-         MyForm.cpp
-       Link:
+     1>Link:
          F:\Visual Studio\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\B4D1K\Documents\GitHub\laboratory\x64\Release\ЛР2.exe" /INCREMENTAL:NO /NOLOGO /ASSEMBLYRESOURCE:"x64\Release\ЛР2.MyForm.resources" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\B4D1K\Documents\GitHub\laboratory\x64\Release\ЛР2.pdb" /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X64 x64\Release\CPoint.obj
          x64\Release\MyForm.obj
          "x64\Release\.NETFramework,Version=v4.5.AssemblyAttributes.obj"
@@ -12,4 +9,4 @@
 
 Сборка успешно завершена.
 
-Затраченное время: 00:00:00.58
+Затраченное время: 00:00:00.32

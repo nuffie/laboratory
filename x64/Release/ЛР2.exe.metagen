@@ -29,7 +29,6 @@ Class MyForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     clamp(Int32*, Int32 IsConst, Int32 IsConst): PrivateScope, Public, HideBySig
     F(Double, Double): PrivateScope, Public, HideBySig
     Fx(Double, Double): PrivateScope, Public, HideBySig
-    Iteration(): PrivateScope, Public, HideBySig
     button1_Click(Object, EventArgs): PrivateScope, Public, HideBySig
     MyForm_MouseDown(Object, MouseEventArgs): PrivateScope, Public, HideBySig
     MyForm_MouseMove(Object, MouseEventArgs): PrivateScope, Public, HideBySig
