@@ -1,8 +1,9 @@
-#pragma once
+﻿#pragma once
 
 using namespace System;
 using namespace System::ComponentModel;
 using namespace System::Collections;
+using namespace System::Windows;
 using namespace System::Windows::Forms;
 using namespace System::Data;
 using namespace System::Drawing;
@@ -14,7 +15,9 @@ bool isMouseDown = false;
 int xOffset, yOffset;
 Point mouseOffset;
 
-public ref class MyForm : public System::Windows::Forms::Form
+using Drawing::Color;
+
+public ref class MyForm : public Forms::Form
 {
 public:
 	MyForm(void)
@@ -34,60 +37,65 @@ protected:
 
 private:
 	System::Windows::Forms::Button^  button1;
-
-	System::Windows::Forms::Label^  x1;
-	System::Windows::Forms::Label^  x2;
-	System::Windows::Forms::Label^  x3;
-	System::Windows::Forms::Label^  y3;
-	System::Windows::Forms::Label^  y2;
-	System::Windows::Forms::Label^  y1;
-
+	System::Windows::Forms::Label^  label2;
+	System::Windows::Forms::Label^  label3;
 	System::Windows::Forms::TextBox^  textBox1;
 	System::Windows::Forms::TextBox^  textBox2;
-	System::Windows::Forms::TextBox^  textBox3;
-	System::Windows::Forms::TextBox^  textBox4;
-	System::Windows::Forms::TextBox^  textBox5;
-	System::Windows::Forms::TextBox^  textBox6;
-	System::Windows::Forms::TextBox^  textBox7;
-	System::Windows::Forms::TextBox^  textBox8;
-
 	System::Windows::Forms::Panel^  panel1;
-	System::Windows::Forms::Label^  label1;
-	System::Windows::Forms::Label^  label2;
+	System::Windows::Forms::Label^  NAME;
+	System::Windows::Forms::Label^  exit;
 	System::Windows::Forms::Label^  task;
-
-	System::Windows::Forms::Label^  label4;
-	System::Windows::Forms::Label^  label5;
 	System::Windows::Forms::Label^  descr;
 	System::Windows::Forms::Label^  about;
-	System::ComponentModel::IContainer^  components;
+
+
+private: System::Windows::Forms::TextBox^  textBox3;
+private: System::Windows::Forms::Label^  label6;
+
+
+
+
+	System::Windows::Forms::Label^  label1;
+	System::Windows::Forms::Label^  label4;
+private: System::Windows::Forms::Label^  label7;
+
+
+
+	System::Windows::Forms::Label^  label8;
+
+private: System::Windows::Forms::ListBox^  listBox1;
+private: System::Windows::Forms::TextBox^  textBox5;
+private: System::Windows::Forms::Label^  label5;
+private: System::Windows::Forms::Label^  label9;
+private: System::Windows::Forms::TextBox^  textBox4;
+
+		 System::ComponentModel::IContainer^  components;
 
 public:
 	void InitializeComponent(void)
 	{
 		this->button1 = (gcnew System::Windows::Forms::Button());
-		this->x1 = (gcnew System::Windows::Forms::Label());
-		this->x2 = (gcnew System::Windows::Forms::Label());
-		this->x3 = (gcnew System::Windows::Forms::Label());
-		this->y3 = (gcnew System::Windows::Forms::Label());
-		this->y2 = (gcnew System::Windows::Forms::Label());
-		this->y1 = (gcnew System::Windows::Forms::Label());
+		this->label2 = (gcnew System::Windows::Forms::Label());
+		this->label3 = (gcnew System::Windows::Forms::Label());
 		this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 		this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-		this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-		this->textBox4 = (gcnew System::Windows::Forms::TextBox());
-		this->textBox5 = (gcnew System::Windows::Forms::TextBox());
-		this->textBox6 = (gcnew System::Windows::Forms::TextBox());
-		this->textBox7 = (gcnew System::Windows::Forms::TextBox());
-		this->textBox8 = (gcnew System::Windows::Forms::TextBox());
 		this->panel1 = (gcnew System::Windows::Forms::Panel());
-		this->label2 = (gcnew System::Windows::Forms::Label());
-		this->label1 = (gcnew System::Windows::Forms::Label());
+		this->exit = (gcnew System::Windows::Forms::Label());
+		this->NAME = (gcnew System::Windows::Forms::Label());
 		this->task = (gcnew System::Windows::Forms::Label());
-		this->label4 = (gcnew System::Windows::Forms::Label());
-		this->label5 = (gcnew System::Windows::Forms::Label());
 		this->descr = (gcnew System::Windows::Forms::Label());
 		this->about = (gcnew System::Windows::Forms::Label());
+		this->textBox3 = (gcnew System::Windows::Forms::TextBox());
+		this->label6 = (gcnew System::Windows::Forms::Label());
+		this->label1 = (gcnew System::Windows::Forms::Label());
+		this->label4 = (gcnew System::Windows::Forms::Label());
+		this->label7 = (gcnew System::Windows::Forms::Label());
+		this->label8 = (gcnew System::Windows::Forms::Label());
+		this->listBox1 = (gcnew System::Windows::Forms::ListBox());
+		this->textBox5 = (gcnew System::Windows::Forms::TextBox());
+		this->label5 = (gcnew System::Windows::Forms::Label());
+		this->label9 = (gcnew System::Windows::Forms::Label());
+		this->textBox4 = (gcnew System::Windows::Forms::TextBox());
 		this->panel1->SuspendLayout();
 		this->SuspendLayout();
 		// 
@@ -96,150 +104,58 @@ public:
 		this->button1->BackColor = System::Drawing::Color::White;
 		this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 		this->button1->ForeColor = System::Drawing::Color::DodgerBlue;
-		this->button1->Location = System::Drawing::Point(453, 361);
+		this->button1->Location = System::Drawing::Point(607, 331);
 		this->button1->Name = L"button1";
-		this->button1->Size = System::Drawing::Size(150, 38);
-		this->button1->TabIndex = 0;
+		this->button1->Size = System::Drawing::Size(188, 38);
+		this->button1->TabIndex = 20;
 		this->button1->Text = L"Вычислить";
 		this->button1->UseVisualStyleBackColor = false;
 		this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 		// 
-		// x1
+		// label2
 		// 
-		this->x1->AutoSize = true;
-		this->x1->BackColor = System::Drawing::Color::Transparent;
-		this->x1->ForeColor = System::Drawing::Color::DodgerBlue;
-		this->x1->Location = System::Drawing::Point(134, 169);
-		this->x1->Name = L"x1";
-		this->x1->Size = System::Drawing::Size(24, 20);
-		this->x1->TabIndex = 2;
-		this->x1->Text = L"x1";
+		this->label2->AutoSize = true;
+		this->label2->BackColor = System::Drawing::Color::Transparent;
+		this->label2->ForeColor = System::Drawing::Color::DodgerBlue;
+		this->label2->Location = System::Drawing::Point(12, 204);
+		this->label2->Name = L"label2";
+		this->label2->Size = System::Drawing::Size(188, 20);
+		this->label2->TabIndex = 2;
+		this->label2->Text = L"Начальное приближение";
 		// 
-		// x2
+		// label3
 		// 
-		this->x2->AutoSize = true;
-		this->x2->BackColor = System::Drawing::Color::Transparent;
-		this->x2->ForeColor = System::Drawing::Color::DodgerBlue;
-		this->x2->Location = System::Drawing::Point(274, 169);
-		this->x2->Name = L"x2";
-		this->x2->Size = System::Drawing::Size(24, 20);
-		this->x2->TabIndex = 3;
-		this->x2->Text = L"x2";
-		// 
-		// x3
-		// 
-		this->x3->AutoSize = true;
-		this->x3->BackColor = System::Drawing::Color::Transparent;
-		this->x3->ForeColor = System::Drawing::Color::DodgerBlue;
-		this->x3->Location = System::Drawing::Point(415, 169);
-		this->x3->Name = L"x3";
-		this->x3->Size = System::Drawing::Size(24, 20);
-		this->x3->TabIndex = 4;
-		this->x3->Text = L"x3";
-		// 
-		// y3
-		// 
-		this->y3->AutoSize = true;
-		this->y3->BackColor = System::Drawing::Color::Transparent;
-		this->y3->ForeColor = System::Drawing::Color::DodgerBlue;
-		this->y3->Location = System::Drawing::Point(415, 241);
-		this->y3->Name = L"y3";
-		this->y3->Size = System::Drawing::Size(24, 20);
-		this->y3->TabIndex = 7;
-		this->y3->Text = L"y3";
-		// 
-		// y2
-		// 
-		this->y2->AutoSize = true;
-		this->y2->BackColor = System::Drawing::Color::Transparent;
-		this->y2->ForeColor = System::Drawing::Color::DodgerBlue;
-		this->y2->Location = System::Drawing::Point(274, 241);
-		this->y2->Name = L"y2";
-		this->y2->Size = System::Drawing::Size(24, 20);
-		this->y2->TabIndex = 6;
-		this->y2->Text = L"y2";
-		// 
-		// y1
-		// 
-		this->y1->AutoSize = true;
-		this->y1->BackColor = System::Drawing::Color::Transparent;
-		this->y1->ForeColor = System::Drawing::Color::DodgerBlue;
-		this->y1->Location = System::Drawing::Point(134, 241);
-		this->y1->Name = L"y1";
-		this->y1->Size = System::Drawing::Size(24, 20);
-		this->y1->TabIndex = 5;
-		this->y1->Text = L"y1";
+		this->label3->AutoSize = true;
+		this->label3->BackColor = System::Drawing::Color::Transparent;
+		this->label3->ForeColor = System::Drawing::Color::DodgerBlue;
+		this->label3->Location = System::Drawing::Point(12, 237);
+		this->label3->Name = L"label3";
+		this->label3->Size = System::Drawing::Size(151, 20);
+		this->label3->TabIndex = 3;
+		this->label3->Text = L"Требуемая точность";
 		// 
 		// textBox1
 		// 
 		this->textBox1->ForeColor = System::Drawing::Color::DodgerBlue;
-		this->textBox1->Location = System::Drawing::Point(134, 192);
+		this->textBox1->Location = System::Drawing::Point(206, 201);
 		this->textBox1->Name = L"textBox1";
-		this->textBox1->Size = System::Drawing::Size(109, 27);
+		this->textBox1->Size = System::Drawing::Size(188, 27);
 		this->textBox1->TabIndex = 8;
 		// 
 		// textBox2
 		// 
 		this->textBox2->ForeColor = System::Drawing::Color::DodgerBlue;
-		this->textBox2->Location = System::Drawing::Point(274, 192);
+		this->textBox2->Location = System::Drawing::Point(206, 237);
 		this->textBox2->Name = L"textBox2";
-		this->textBox2->Size = System::Drawing::Size(109, 27);
+		this->textBox2->Size = System::Drawing::Size(188, 27);
 		this->textBox2->TabIndex = 9;
-		// 
-		// textBox3
-		// 
-		this->textBox3->ForeColor = System::Drawing::Color::DodgerBlue;
-		this->textBox3->Location = System::Drawing::Point(415, 192);
-		this->textBox3->Name = L"textBox3";
-		this->textBox3->Size = System::Drawing::Size(109, 27);
-		this->textBox3->TabIndex = 10;
-		// 
-		// textBox4
-		// 
-		this->textBox4->ForeColor = System::Drawing::Color::DodgerBlue;
-		this->textBox4->Location = System::Drawing::Point(415, 264);
-		this->textBox4->Name = L"textBox4";
-		this->textBox4->Size = System::Drawing::Size(109, 27);
-		this->textBox4->TabIndex = 13;
-		// 
-		// textBox5
-		// 
-		this->textBox5->ForeColor = System::Drawing::Color::DodgerBlue;
-		this->textBox5->Location = System::Drawing::Point(274, 264);
-		this->textBox5->Name = L"textBox5";
-		this->textBox5->Size = System::Drawing::Size(109, 27);
-		this->textBox5->TabIndex = 12;
-		// 
-		// textBox6
-		// 
-		this->textBox6->ForeColor = System::Drawing::Color::DodgerBlue;
-		this->textBox6->Location = System::Drawing::Point(134, 264);
-		this->textBox6->Name = L"textBox6";
-		this->textBox6->Size = System::Drawing::Size(109, 27);
-		this->textBox6->TabIndex = 11;
-		// 
-		// textBox7
-		// 
-		this->textBox7->ForeColor = System::Drawing::Color::DodgerBlue;
-		this->textBox7->Location = System::Drawing::Point(626, 192);
-		this->textBox7->Name = L"textBox7";
-		this->textBox7->Size = System::Drawing::Size(190, 27);
-		this->textBox7->TabIndex = 14;
-		// 
-		// textBox8
-		// 
-		this->textBox8->ForeColor = System::Drawing::Color::DodgerBlue;
-		this->textBox8->Location = System::Drawing::Point(626, 264);
-		this->textBox8->Name = L"textBox8";
-		this->textBox8->Size = System::Drawing::Size(190, 27);
-		this->textBox8->TabIndex = 15;
 		// 
 		// panel1
 		// 
 		this->panel1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
 			static_cast<System::Int32>(static_cast<System::Byte>(128)));
-		this->panel1->Controls->Add(this->label2);
-		this->panel1->Controls->Add(this->label1);
+		this->panel1->Controls->Add(this->exit);
+		this->panel1->Controls->Add(this->NAME);
 		this->panel1->ForeColor = System::Drawing::SystemColors::ControlText;
 		this->panel1->Location = System::Drawing::Point(0, 0);
 		this->panel1->Name = L"panel1";
@@ -249,65 +165,43 @@ public:
 		this->panel1->MouseMove += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::MyForm_MouseMove);
 		this->panel1->MouseUp += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::MyForm_MouseUp);
 		// 
-		// label2
+		// exit
 		// 
-		this->label2->AutoSize = true;
-		this->label2->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+		this->exit->AutoSize = true;
+		this->exit->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 			static_cast<System::Byte>(204)));
-		this->label2->ForeColor = System::Drawing::Color::Black;
-		this->label2->Location = System::Drawing::Point(1131, 2);
-		this->label2->Name = L"label2";
-		this->label2->Size = System::Drawing::Size(25, 30);
-		this->label2->TabIndex = 17;
-		this->label2->Text = L"X";
-		this->label2->Click += gcnew System::EventHandler(this, &MyForm::label2_Click);
-		this->label2->MouseEnter += gcnew System::EventHandler(this, &MyForm::label2_MouseEnter);
-		this->label2->MouseLeave += gcnew System::EventHandler(this, &MyForm::label2_MouseLeave);
+		this->exit->ForeColor = System::Drawing::Color::Black;
+		this->exit->Location = System::Drawing::Point(1131, 2);
+		this->exit->Name = L"exit";
+		this->exit->Size = System::Drawing::Size(25, 30);
+		this->exit->TabIndex = 17;
+		this->exit->Text = L"X";
+		this->exit->Click += gcnew System::EventHandler(this, &MyForm::label2_Click);
+		this->exit->MouseEnter += gcnew System::EventHandler(this, &MyForm::label2_MouseEnter);
+		this->exit->MouseLeave += gcnew System::EventHandler(this, &MyForm::label2_MouseLeave);
 		// 
-		// label1
+		// NAME
 		// 
-		this->label1->AutoSize = true;
-		this->label1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+		this->NAME->AutoSize = true;
+		this->NAME->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 			static_cast<System::Byte>(204)));
-		this->label1->ForeColor = System::Drawing::Color::DodgerBlue;
-		this->label1->Location = System::Drawing::Point(3, 4);
-		this->label1->Name = L"label1";
-		this->label1->Size = System::Drawing::Size(231, 25);
-		this->label1->TabIndex = 17;
-		this->label1->Text = L"Лабораторная работа #2";
+		this->NAME->ForeColor = System::Drawing::Color::DodgerBlue;
+		this->NAME->Location = System::Drawing::Point(3, 4);
+		this->NAME->Name = L"NAME";
+		this->NAME->Size = System::Drawing::Size(231, 25);
+		this->NAME->TabIndex = 17;
+		this->NAME->Text = L"Лабораторная работа #2";
 		// 
 		// task
 		// 
 		this->task->AutoSize = true;
 		this->task->ForeColor = System::Drawing::Color::DodgerBlue;
-		this->task->Location = System::Drawing::Point(130, 94);
+		this->task->Location = System::Drawing::Point(143, 69);
 		this->task->Name = L"task";
-		this->task->Size = System::Drawing::Size(400, 60);
+		this->task->Size = System::Drawing::Size(362, 100);
 		this->task->TabIndex = 17;
-		this->task->Text = L"Задание:\r\nСоздать проект, вычисляющий P и S по трём заданным \r\nкоординатам треуго"
-			L"льника.\r\n";
-		// 
-		// label4
-		// 
-		this->label4->AutoSize = true;
-		this->label4->BackColor = System::Drawing::Color::Transparent;
-		this->label4->ForeColor = System::Drawing::Color::DodgerBlue;
-		this->label4->Location = System::Drawing::Point(589, 195);
-		this->label4->Name = L"label4";
-		this->label4->Size = System::Drawing::Size(31, 20);
-		this->label4->TabIndex = 18;
-		this->label4->Text = L"P =";
-		// 
-		// label5
-		// 
-		this->label5->AutoSize = true;
-		this->label5->BackColor = System::Drawing::Color::Transparent;
-		this->label5->ForeColor = System::Drawing::Color::DodgerBlue;
-		this->label5->Location = System::Drawing::Point(589, 267);
-		this->label5->Name = L"label5";
-		this->label5->Size = System::Drawing::Size(31, 20);
-		this->label5->TabIndex = 19;
-		this->label5->Text = L"S =";
+		this->task->Text = L"Задание:\r\nВычислить с заданной точностью приближенное \r\nзначение корня заданного "
+			L"уравнения с помощью\r\nитерационной формулы\r\n\r\n";
 		// 
 		// descr
 		// 
@@ -331,6 +225,117 @@ public:
 		this->about->Text = L"О программе";
 		this->about->Click += gcnew System::EventHandler(this, &MyForm::about_Click);
 		// 
+		// textBox3
+		// 
+		this->textBox3->Enabled = false;
+		this->textBox3->ForeColor = System::Drawing::Color::DodgerBlue;
+		this->textBox3->Location = System::Drawing::Point(938, 201);
+		this->textBox3->Name = L"textBox3";
+		this->textBox3->Size = System::Drawing::Size(170, 27);
+		this->textBox3->TabIndex = 100;
+		// 
+		// label6
+		// 
+		this->label6->AutoSize = true;
+		this->label6->BackColor = System::Drawing::Color::Transparent;
+		this->label6->ForeColor = System::Drawing::Color::DodgerBlue;
+		this->label6->Location = System::Drawing::Point(789, 204);
+		this->label6->Name = L"label6";
+		this->label6->Size = System::Drawing::Size(143, 20);
+		this->label6->TabIndex = 21;
+		this->label6->Text = L"Значение X конечн";
+		// 
+		// label1
+		// 
+		this->label1->AutoSize = true;
+		this->label1->ForeColor = System::Drawing::Color::Gray;
+		this->label1->Location = System::Drawing::Point(12, 172);
+		this->label1->Name = L"label1";
+		this->label1->Size = System::Drawing::Size(148, 20);
+		this->label1->TabIndex = 25;
+		this->label1->Text = L"Начальные условия";
+		// 
+		// label4
+		// 
+		this->label4->AutoSize = true;
+		this->label4->ForeColor = System::Drawing::Color::Gray;
+		this->label4->Location = System::Drawing::Point(401, 172);
+		this->label4->Name = L"label4";
+		this->label4->Size = System::Drawing::Size(75, 20);
+		this->label4->TabIndex = 26;
+		this->label4->Text = L"Результат";
+		// 
+		// label7
+		// 
+		this->label7->AutoSize = true;
+		this->label7->ForeColor = System::Drawing::Color::Gray;
+		this->label7->Location = System::Drawing::Point(123, 288);
+		this->label7->Name = L"label7";
+		this->label7->Size = System::Drawing::Size(85, 20);
+		this->label7->TabIndex = 28;
+		this->label7->Text = L"Итерация i";
+		// 
+		// label8
+		// 
+		this->label8->AutoSize = true;
+		this->label8->ForeColor = System::Drawing::Color::Gray;
+		this->label8->Location = System::Drawing::Point(374, 288);
+		this->label8->Name = L"label8";
+		this->label8->Size = System::Drawing::Size(148, 20);
+		this->label8->TabIndex = 29;
+		this->label8->Text = L"Текущее значение y";
+		// 
+		// listBox1
+		// 
+		this->listBox1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+			| System::Windows::Forms::AnchorStyles::Right));
+		this->listBox1->BackColor = System::Drawing::SystemColors::Window;
+		this->listBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
+		this->listBox1->FormattingEnabled = true;
+		this->listBox1->ItemHeight = 20;
+		this->listBox1->Location = System::Drawing::Point(127, 331);
+		this->listBox1->Name = L"listBox1";
+		this->listBox1->Size = System::Drawing::Size(395, 240);
+		this->listBox1->TabIndex = 31;
+		// 
+		// textBox5
+		// 
+		this->textBox5->ForeColor = System::Drawing::Color::DodgerBlue;
+		this->textBox5->Location = System::Drawing::Point(613, 201);
+		this->textBox5->Name = L"textBox5";
+		this->textBox5->Size = System::Drawing::Size(170, 27);
+		this->textBox5->TabIndex = 10;
+		// 
+		// label5
+		// 
+		this->label5->AutoSize = true;
+		this->label5->BackColor = System::Drawing::Color::Transparent;
+		this->label5->ForeColor = System::Drawing::Color::DodgerBlue;
+		this->label5->Location = System::Drawing::Point(400, 204);
+		this->label5->Name = L"label5";
+		this->label5->Size = System::Drawing::Size(207, 20);
+		this->label5->TabIndex = 32;
+		this->label5->Text = L"Точность вычислений [4-16]";
+		// 
+		// label9
+		// 
+		this->label9->AutoSize = true;
+		this->label9->BackColor = System::Drawing::Color::Transparent;
+		this->label9->ForeColor = System::Drawing::Color::DodgerBlue;
+		this->label9->Location = System::Drawing::Point(401, 240);
+		this->label9->Name = L"label9";
+		this->label9->Size = System::Drawing::Size(161, 20);
+		this->label9->TabIndex = 34;
+		this->label9->Text = L"Количество итераций";
+		// 
+		// textBox4
+		// 
+		this->textBox4->ForeColor = System::Drawing::Color::DodgerBlue;
+		this->textBox4->Location = System::Drawing::Point(614, 237);
+		this->textBox4->Name = L"textBox4";
+		this->textBox4->Size = System::Drawing::Size(170, 27);
+		this->textBox4->TabIndex = 11;
+		// 
 		// MyForm
 		// 
 		this->AutoScaleDimensions = System::Drawing::SizeF(8, 20);
@@ -338,26 +343,25 @@ public:
 		this->BackColor = System::Drawing::Color::White;
 		this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
 		this->ClientSize = System::Drawing::Size(1157, 598);
+		this->Controls->Add(this->textBox4);
+		this->Controls->Add(this->label9);
+		this->Controls->Add(this->textBox5);
+		this->Controls->Add(this->label5);
+		this->Controls->Add(this->listBox1);
+		this->Controls->Add(this->label8);
+		this->Controls->Add(this->label7);
+		this->Controls->Add(this->label4);
+		this->Controls->Add(this->label1);
+		this->Controls->Add(this->textBox3);
+		this->Controls->Add(this->label6);
 		this->Controls->Add(this->about);
 		this->Controls->Add(this->descr);
-		this->Controls->Add(this->label5);
-		this->Controls->Add(this->label4);
 		this->Controls->Add(this->task);
 		this->Controls->Add(this->panel1);
-		this->Controls->Add(this->textBox8);
-		this->Controls->Add(this->textBox7);
-		this->Controls->Add(this->textBox4);
-		this->Controls->Add(this->textBox5);
-		this->Controls->Add(this->textBox6);
-		this->Controls->Add(this->textBox3);
 		this->Controls->Add(this->textBox2);
 		this->Controls->Add(this->textBox1);
-		this->Controls->Add(this->y3);
-		this->Controls->Add(this->y2);
-		this->Controls->Add(this->y1);
-		this->Controls->Add(this->x3);
-		this->Controls->Add(this->x2);
-		this->Controls->Add(this->x1);
+		this->Controls->Add(this->label3);
+		this->Controls->Add(this->label2);
 		this->Controls->Add(this->button1);
 		this->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 			static_cast<System::Byte>(204)));
@@ -368,7 +372,7 @@ public:
 		this->Name = L"MyForm";
 		this->ShowIcon = false;
 		this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-		this->Text = L"Лабораторная работа #1";
+		this->Text = L"Лабораторная работа #2";
 		this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 		this->panel1->ResumeLayout(false);
 		this->panel1->PerformLayout();
@@ -382,10 +386,18 @@ public:
 		this->BackgroundImage = Image::FromFile("C:\\Users\\B4D1K\\Desktop\\KWORK\\bg.bmp");
 		this->SetStyle(System::Windows::Forms::ControlStyles::SupportsTransparentBackColor, true);
 		this->button1->UseVisualStyleBackColor = true;
-		this->button1->BackColor = Drawing::Color::White;
-		this->task->BackColor = Drawing::Color::Transparent;
-		this->descr->BackColor = Drawing::Color::Transparent;
-		this->about->BackColor = Drawing::Color::Transparent;
+		this->button1->BackColor = Color::White;
+		this->task->BackColor = Color::Transparent;
+		this->descr->BackColor = Color::Transparent;
+		this->about->BackColor = Color::Transparent;
+		this->label1->BackColor = Color::Transparent;
+		this->label2->BackColor = Color::Transparent;
+		this->label3->BackColor = Color::Transparent;
+		this->label4->BackColor = Color::Transparent;
+		this->label5->BackColor = Color::Transparent;
+		this->label6->BackColor = Color::Transparent;
+		this->label7->BackColor = Color::Transparent;
+		this->label8->BackColor = Color::Transparent;
 	}
 
 	System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
@@ -399,60 +411,81 @@ public:
 
 	int check = 0;
 
-	void check_TB(TextBox^ tb)
+	double ToDouble(Forms::TextBox^ obj)
 	{
-		if (tb->Text->Length == 0)
+		double res = 0.f;
+
+		if (!System::Double::TryParse(obj->Text, res))
 		{
-			tb->Text = "0";
-			check++;
+			obj->Text = "0"; res = 0.f;
+			MessageBox::Show("Неверные значения. Введите число с плавающей точкой!", "Ошибка в поле [" + obj->Name + "]");
 		}
 
-		return;
+		return res;
+	}
+
+	int ToInt(Forms::TextBox^ obj)
+	{
+		int res = 1;
+
+		if (!System::Int32::TryParse(obj->Text, res))
+		{
+			obj->Text = "1";
+			MessageBox::Show("Неверные значения. Введите число с плавающей точкой!", "Ошибка в поле [" + obj->Name + "]");
+		}
+
+		return res;
+	}
+
+	void clamp(int* ptr, const int min, const int max)
+	{
+		if (*ptr > max) 
+			*ptr = max;
+
+		if (*ptr < min) 
+			*ptr = min;
+	}
+
+	// param1 - число
+	// param2 - степень
+	double F(double x, double n)
+	{
+		return (pow(-1, n + 1) * (pow(x, (2 * n + 1)) / (4 * pow(n, 2) - 1)));
+	}
+
+	double Fx(double x, double n)
+	{
+		return (pow(-1, n + 1) * pow(x, 2 * n + 1) * (2 * n + 1)) / (x*(4 * pow(n,2) - 1));
+	}
+
+	void Iteration()
+	{
+
 	}
 
 	System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+		listBox1->Items->Clear();
 
-		check = 0;
+		int i = 1;
 
-		// Проверка всех полей на заполненность
-		check_TB(textBox1);
-		check_TB(textBox2);
-		check_TB(textBox3);
-		check_TB(textBox4);
-		check_TB(textBox5);
-		check_TB(textBox6);
+		double x0 = ToDouble(textBox1);
+		double EPS = ToDouble(textBox2);
+		int iter = ToInt(textBox4);
+		int accuracy = ToInt(textBox5);
+		double y = x0;
 
-		if (check > 0)
-			MessageBox::Show("Обнаружена ошибка в вводимых данных. \nОшибочные поля будут заполнены нулями");
+		clamp(&accuracy, 4, 16);
+		clamp(&iter, 1, 10000);
 
-		// получение всех координат
-		double X1, X2, X3, Y1, Y2, Y3;
-		double number = 0.f;
+		do
+		{
+			y = F(x0, i);
+			auto fs = String::Format("{0,2:D2}\t\t\t{1,15:F" + accuracy.ToString() + "}\t", i, y);
+			listBox1->Items->Add(fs);
+			i++;
+		} while (abs(y) >= EPS && i < iter);
 
-		int error = 0;
-
-		if (System::Double::TryParse(textBox1->Text, number)) { X1 = number; number = 0.f; error++; }
-		if (System::Double::TryParse(textBox2->Text, number)) { X2 = number; number = 0.f; error++; }
-		if (System::Double::TryParse(textBox3->Text, number)) { X3 = number; number = 0.f; error++; }
-
-		if (System::Double::TryParse(textBox4->Text, number)) { Y1 = number; number = 0.f; error++; }
-		if (System::Double::TryParse(textBox5->Text, number)) { Y2 = number; number = 0.f; error++; }
-		if (System::Double::TryParse(textBox6->Text, number)) { Y3 = number; number = 0.f; error++; }
-
-		if (error != 6)
-			MessageBox::Show("Обнаружена ошибка в вводимых данных. \nОшибочные поля будут заполнены нулями");
-
-		CPoint A(X1, Y1), B(X2, Y2), C(X3, Y3);
-
-		double lA = LenghtSegment(A, B);
-		double lB = LenghtSegment(B, C);
-		double lC = LenghtSegment(C, A);
-
-		double P = TriangleP(lA, lB, lC, false);
-		textBox7->Text = P.ToString();
-
-		double S = Geron(lA, lB, lC);
-		textBox8->Text = S.ToString();
+		textBox3->Text = y.ToString();
 	}
 
 	System::Void MyForm_MouseDown(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
@@ -492,11 +525,11 @@ public:
 	}
 
 	System::Void label2_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
-		label2->ForeColor = Color::Black;
+		exit->ForeColor = Color::Black;
 	}
 
 	System::Void label2_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
-		label2->ForeColor = System::Drawing::Color::FromArgb(
+		exit->ForeColor = System::Drawing::Color::FromArgb(
 			static_cast<System::Int32>(static_cast<System::Byte>(30)),
 			static_cast<System::Int32>(static_cast<System::Byte>(144)),
 			static_cast<System::Int32>(static_cast<System::Byte>(255))
