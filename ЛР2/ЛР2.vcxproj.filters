@@ -18,19 +18,10 @@
     <ClCompile Include="MyForm.cpp">
       <Filter>Заголовочные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="CPoint.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
       <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="CPoint.hpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClInclude>
-    <ClInclude Include="Math.hpp">
-      <Filter>Файлы исходного кода</Filter>
     </ClInclude>
     <ClInclude Include="stdafx.hpp">
       <Filter>Файлы исходного кода</Filter>
@@ -41,6 +32,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MyForm.resx">
+      <Filter>Файлы ресурсов</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControl.resx">
       <Filter>Файлы ресурсов</Filter>
     </EmbeddedResource>
   </ItemGroup>
