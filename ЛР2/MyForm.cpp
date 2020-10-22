@@ -1,6 +1,5 @@
 #include "stdafx.hpp"
 #include "MyForm.h"
-#include "Math.hpp"
 
 using namespace System;
 #define WINAPI __stdcall

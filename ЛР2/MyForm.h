@@ -8,8 +8,6 @@ using namespace System::Windows::Forms;
 using namespace System::Data;
 using namespace System::Drawing;
 
-#include "Math.hpp"
-#include "CPoint.hpp"
 #include "MyUserControl.h"
 
 bool isMouseDown = false;
