@@ -13,5 +13,24 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Cut">
+      <UniqueIdentifier>{8ccb8c36-2de9-41dd-b3f7-b18a4d2bc27b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MyForm.cpp">
+      <Filter>Заголовочные файлы</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MyForm.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.hpp">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="Cut.hpp">
+      <Filter>Cut</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
