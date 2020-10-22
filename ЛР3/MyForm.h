@@ -1,4 +1,5 @@
 #pragma once
+#pragma once
 
 using namespace System;
 using namespace System::ComponentModel;
@@ -111,7 +112,7 @@ public:
 		this->button1->Name = L"button1";
 		this->button1->Size = System::Drawing::Size(188, 27);
 		this->button1->TabIndex = 20;
-		this->button1->Text = L"Вычислить";
+		this->button1->Text = L"Р’С‹С‡РёСЃР»РёС‚СЊ";
 		this->button1->UseVisualStyleBackColor = false;
 		this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 		// 
@@ -124,7 +125,7 @@ public:
 		this->label2->Name = L"label2";
 		this->label2->Size = System::Drawing::Size(102, 20);
 		this->label2->TabIndex = 2;
-		this->label2->Text = L"Отрезок [A;B]";
+		this->label2->Text = L"РћС‚СЂРµР·РѕРє [A;B]";
 		// 
 		// label3
 		// 
@@ -135,7 +136,7 @@ public:
 		this->label3->Name = L"label3";
 		this->label3->Size = System::Drawing::Size(49, 20);
 		this->label3->TabIndex = 3;
-		this->label3->Text = L"Шаг h";
+		this->label3->Text = L"РЁР°Рі h";
 		// 
 		// textBox1
 		// 
@@ -193,7 +194,7 @@ public:
 		this->NAME->Name = L"NAME";
 		this->NAME->Size = System::Drawing::Size(231, 25);
 		this->NAME->TabIndex = 17;
-		this->NAME->Text = L"Лабораторная работа #3";
+		this->NAME->Text = L"Р›Р°Р±РѕСЂР°С‚РѕСЂРЅР°СЏ СЂР°Р±РѕС‚Р° #3";
 		// 
 		// task
 		// 
@@ -203,8 +204,8 @@ public:
 		this->task->Name = L"task";
 		this->task->Size = System::Drawing::Size(315, 100);
 		this->task->TabIndex = 17;
-		this->task->Text = L"Задание:\r\nПостройте таблицу и найдите наименьшее \r\nзначение функции y=f(x) при из"
-			L"менении x \r\nна отрезке [a; b]c шагом h.\r\n\r\n";
+		this->task->Text = L"Р—Р°РґР°РЅРёРµ:\r\nРџРѕСЃС‚СЂРѕР№С‚Рµ С‚Р°Р±Р»РёС†Сѓ Рё РЅР°Р№РґРёС‚Рµ РЅР°РёРјРµРЅСЊС€РµРµ \r\nР·РЅР°С‡РµРЅРёРµ С„СѓРЅРєС†РёРё y=f(x) РїСЂРё РёР·"
+			L"РјРµРЅРµРЅРёРё x \r\nРЅР° РѕС‚СЂРµР·РєРµ [a; b]c С€Р°РіРѕРј h.\r\n\r\n";
 		// 
 		// descr
 		// 
@@ -225,7 +226,7 @@ public:
 		this->about->Name = L"about";
 		this->about->Size = System::Drawing::Size(128, 25);
 		this->about->TabIndex = 18;
-		this->about->Text = L"О программе";
+		this->about->Text = L"Рћ РїСЂРѕРіСЂР°РјРјРµ";
 		this->about->Click += gcnew System::EventHandler(this, &MyForm::about_Click);
 		// 
 		// label1
@@ -236,7 +237,7 @@ public:
 		this->label1->Name = L"label1";
 		this->label1->Size = System::Drawing::Size(148, 20);
 		this->label1->TabIndex = 25;
-		this->label1->Text = L"Начальные условия";
+		this->label1->Text = L"РќР°С‡Р°Р»СЊРЅС‹Рµ СѓСЃР»РѕРІРёСЏ";
 		// 
 		// label4
 		// 
@@ -246,7 +247,7 @@ public:
 		this->label4->Name = L"label4";
 		this->label4->Size = System::Drawing::Size(75, 20);
 		this->label4->TabIndex = 26;
-		this->label4->Text = L"Результат";
+		this->label4->Text = L"Р РµР·СѓР»СЊС‚Р°С‚";
 		// 
 		// label6
 		// 
@@ -298,7 +299,7 @@ public:
 		this->label7->Name = L"label7";
 		this->label7->Size = System::Drawing::Size(139, 20);
 		this->label7->TabIndex = 33;
-		this->label7->Text = L"Настройка вывода";
+		this->label7->Text = L"РќР°СЃС‚СЂРѕР№РєР° РІС‹РІРѕРґР°";
 		// 
 		// numericUpDown1
 		// 
@@ -321,7 +322,7 @@ public:
 		this->label8->Name = L"label8";
 		this->label8->Size = System::Drawing::Size(110, 40);
 		this->label8->TabIndex = 35;
-		this->label8->Text = L"Число знаков \r\nпосле запятой";
+		this->label8->Text = L"Р§РёСЃР»Рѕ Р·РЅР°РєРѕРІ \r\nРїРѕСЃР»Рµ Р·Р°РїСЏС‚РѕР№";
 		// 
 		// label9
 		// 
@@ -332,7 +333,7 @@ public:
 		this->label9->Name = L"label9";
 		this->label9->Size = System::Drawing::Size(95, 20);
 		this->label9->TabIndex = 36;
-		this->label9->Text = L"Разделитель";
+		this->label9->Text = L"Р Р°Р·РґРµР»РёС‚РµР»СЊ";
 		// 
 		// comboBox1
 		// 
@@ -386,7 +387,7 @@ public:
 		this->Name = L"MyForm";
 		this->ShowIcon = false;
 		this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-		this->Text = L"Лабораторная работа #2";
+		this->Text = L"Р›Р°Р±РѕСЂР°С‚РѕСЂРЅР°СЏ СЂР°Р±РѕС‚Р° #2";
 		this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 		this->panel1->ResumeLayout(false);
 		this->panel1->PerformLayout();
@@ -520,8 +521,8 @@ public:
 			case Code::eInput:
 			{
 				MessageBox::Show(
-					"Ошибка ввода отрезка [A;B].\nДанные нужно вводить согласно выбранному разделителю!", 
-					"Ошибка", 
+					"РћС€РёР±РєР° РІРІРѕРґР° РѕС‚СЂРµР·РєР° [A;B].\nР”Р°РЅРЅС‹Рµ РЅСѓР¶РЅРѕ РІРІРѕРґРёС‚СЊ СЃРѕРіР»Р°СЃРЅРѕ РІС‹Р±СЂР°РЅРЅРѕРјСѓ СЂР°Р·РґРµР»РёС‚РµР»СЋ!", 
+					"РћС€РёР±РєР°", 
 					MessageBoxButtons::OK, 
 					MessageBoxIcon::Error);
 				return;
@@ -530,8 +531,8 @@ public:
 			case Code::eStep:
 			{
 				MessageBox::Show(
-					"Ошибка ввода шага H.\nДопускатся использование только чисел.",
-					"Ошибка",
+					"РћС€РёР±РєР° РІРІРѕРґР° С€Р°РіР° H.\nР”РѕРїСѓСЃРєР°С‚СЃСЏ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ С‚РѕР»СЊРєРѕ С‡РёСЃРµР».",
+					"РћС€РёР±РєР°",
 					MessageBoxButtons::OK,
 					MessageBoxIcon::Error);
 				return;
@@ -540,8 +541,8 @@ public:
 			case Code::eConvert:
 			{
 				MessageBox::Show(
-					"Число с плавающей точкой отделяется запятой, а не точкой.\nАвтоматическая замена точки на запятую.\nПрограмма продолжает работу.",
-					"Предупреждение",
+					"Р§РёСЃР»Рѕ СЃ РїР»Р°РІР°СЋС‰РµР№ С‚РѕС‡РєРѕР№ РѕС‚РґРµР»СЏРµС‚СЃСЏ Р·Р°РїСЏС‚РѕР№, Р° РЅРµ С‚РѕС‡РєРѕР№.\nРђРІС‚РѕРјР°С‚РёС‡РµСЃРєР°СЏ Р·Р°РјРµРЅР° С‚РѕС‡РєРё РЅР° Р·Р°РїСЏС‚СѓСЋ.\nРџСЂРѕРіСЂР°РјРјР° РїСЂРѕРґРѕР»Р¶Р°РµС‚ СЂР°Р±РѕС‚Сѓ.",
+					"РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ",
 					MessageBoxButtons::OK,
 					MessageBoxIcon::Information);
 			}break;
@@ -639,7 +640,7 @@ public:
 	}
 
 	System::Void about_Click(System::Object^  sender, System::EventArgs^  e) {
-		MessageBox::Show("Задание выполнил : \nb4d1k", "Подробнее о работе");
+		MessageBox::Show("Р—Р°РґР°РЅРёРµ РІС‹РїРѕР»РЅРёР» : \nb4d1k", "РџРѕРґСЂРѕР±РЅРµРµ Рѕ СЂР°Р±РѕС‚Рµ");
 	}
 
 	System::Void numericUpDown1_ValueChanged(System::Object^  sender, System::EventArgs^  e) {
