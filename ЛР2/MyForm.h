@@ -10,6 +10,7 @@ using namespace System::Drawing;
 
 #include "Math.hpp"
 #include "CPoint.hpp"
+#include "MyUserControl.h"
 
 bool isMouseDown = false;
 int xOffset, yOffset;
@@ -58,6 +59,7 @@ private:
 	System::Windows::Forms::Label^  label9;
 	System::Windows::Forms::TextBox^  textBox4;
 	System::ComponentModel::IContainer^  components;
+	MyUI::MyUserControl^ c;
 
 public:
 	void InitializeComponent(void)
@@ -331,8 +333,8 @@ public:
 		this->BackColor = System::Drawing::Color::White;
 		this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
 		this->ClientSize = System::Drawing::Size(1157, 598);
-		this->Controls->Add(this->textBox4);
 		this->Controls->Add(this->label9);
+		this->Controls->Add(this->textBox4);
 		this->Controls->Add(this->textBox5);
 		this->Controls->Add(this->label5);
 		this->Controls->Add(this->listBox1);
@@ -351,7 +353,6 @@ public:
 		this->Controls->Add(this->label3);
 		this->Controls->Add(this->label2);
 		this->Controls->Add(this->button1);
-
 		this->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 			static_cast<System::Byte>(204)));
 		this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
@@ -387,6 +388,16 @@ public:
 		this->label6->BackColor = Color::Transparent;
 		this->label7->BackColor = Color::Transparent;
 		this->label8->BackColor = Color::Transparent;
+
+		this->panel1->SuspendLayout();
+		this->SuspendLayout();
+
+		
+
+		this->panel1->ResumeLayout(false);
+		this->panel1->PerformLayout();
+		this->ResumeLayout(false);
+		this->PerformLayout();
 	}
 
 	System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
