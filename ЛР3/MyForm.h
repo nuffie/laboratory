@@ -582,7 +582,7 @@ public:
 			if (Y < min)
 				min = Y;
 
-			auto fs = String::Format("{0,2:F" + countSymbols + "}\t\t{1,2:F" + countSymbols + "}\t", cut.GetX(), Y);
+			auto fs = String::Format("{0,2:D1}\t{1,2:F" + countSymbols + "}\t{2,2:F" + countSymbols + "}\t", listBox1->Items->Count, cut.GetX(), Y);
 			listBox1->Items->Add(fs);
 			cut.AddX(h);
 		}
@@ -646,7 +646,7 @@ public:
 		countSymbols = Convert::ToInt32(numericUpDown1->Value);
 
 		if (countSymbols > 14)
-			this->listBox1->Size = System::Drawing::Size(449, 200);
+			this->listBox1->Size = System::Drawing::Size(469, 200);
 		else
 			this->listBox1->Size = System::Drawing::Size(349, 200);
 
