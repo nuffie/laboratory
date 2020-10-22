@@ -35,6 +35,9 @@
     <ClInclude Include="stdafx.hpp">
       <Filter>Файлы исходного кода</Filter>
     </ClInclude>
+    <ClInclude Include="MyUserControl.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MyForm.resx">
