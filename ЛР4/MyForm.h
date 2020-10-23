@@ -79,6 +79,8 @@ private: System::Windows::Forms::TextBox^  textBox3;
 
 private: System::Windows::Forms::Label^  label11;
 private: System::Windows::Forms::Label^  label10;
+private: System::Windows::Forms::Label^  label12;
+private: System::Windows::Forms::TextBox^  textBox6;
 
 
 
@@ -113,6 +115,8 @@ public:
 		this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 		this->label11 = (gcnew System::Windows::Forms::Label());
 		this->label10 = (gcnew System::Windows::Forms::Label());
+		this->label12 = (gcnew System::Windows::Forms::Label());
+		this->textBox6 = (gcnew System::Windows::Forms::TextBox());
 		this->panel1->SuspendLayout();
 		(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->BeginInit();
 		this->SuspendLayout();
@@ -122,7 +126,7 @@ public:
 		this->button1->BackColor = System::Drawing::Color::White;
 		this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 		this->button1->ForeColor = System::Drawing::Color::DodgerBlue;
-		this->button1->Location = System::Drawing::Point(547, 244);
+		this->button1->Location = System::Drawing::Point(547, 287);
 		this->button1->Name = L"button1";
 		this->button1->Size = System::Drawing::Size(188, 27);
 		this->button1->TabIndex = 20;
@@ -214,12 +218,13 @@ public:
 		// 
 		this->task->AutoSize = true;
 		this->task->ForeColor = System::Drawing::Color::DodgerBlue;
-		this->task->Location = System::Drawing::Point(140, 63);
+		this->task->Location = System::Drawing::Point(134, 52);
 		this->task->Name = L"task";
-		this->task->Size = System::Drawing::Size(315, 100);
+		this->task->Size = System::Drawing::Size(328, 120);
 		this->task->TabIndex = 17;
-		this->task->Text = L"Задание:\r\nПостройте таблицу и найдите наименьшее \r\nзначение функции y=f(x) при из"
-			L"менении x \r\nна отрезке [a; b]c шагом h.\r\n\r\n";
+		this->task->Text = L"Задание:\r\nПостройте таблицу и найдите количество\r\nи сумму  значений функции |z=f("
+			L"x,y)| > 0.1 \r\nпри изменении x на отрезке [a; b]c шагом h1 \r\nи изменении y на отр"
+			L"езке [c,d] с шагом h2\r\n\r\n";
 		// 
 		// descr
 		// 
@@ -293,9 +298,9 @@ public:
 		this->label5->ForeColor = System::Drawing::Color::DodgerBlue;
 		this->label5->Location = System::Drawing::Point(465, 207);
 		this->label5->Name = L"label5";
-		this->label5->Size = System::Drawing::Size(46, 20);
+		this->label5->Size = System::Drawing::Size(61, 20);
 		this->label5->TabIndex = 32;
-		this->label5->Text = L"Y min";
+		this->label5->Text = L"Count Z";
 		// 
 		// textBox5
 		// 
@@ -403,6 +408,25 @@ public:
 		this->label10->TabIndex = 38;
 		this->label10->Text = L"Y = [C;D]";
 		// 
+		// label12
+		// 
+		this->label12->AutoSize = true;
+		this->label12->BackColor = System::Drawing::Color::Transparent;
+		this->label12->ForeColor = System::Drawing::Color::DodgerBlue;
+		this->label12->Location = System::Drawing::Point(465, 244);
+		this->label12->Name = L"label12";
+		this->label12->Size = System::Drawing::Size(51, 20);
+		this->label12->TabIndex = 40;
+		this->label12->Text = L"Sum Z";
+		// 
+		// textBox6
+		// 
+		this->textBox6->ForeColor = System::Drawing::Color::DodgerBlue;
+		this->textBox6->Location = System::Drawing::Point(547, 244);
+		this->textBox6->Name = L"textBox6";
+		this->textBox6->Size = System::Drawing::Size(188, 27);
+		this->textBox6->TabIndex = 41;
+		// 
 		// MyForm
 		// 
 		this->AutoScaleDimensions = System::Drawing::SizeF(8, 20);
@@ -410,6 +434,8 @@ public:
 		this->BackColor = System::Drawing::Color::White;
 		this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
 		this->ClientSize = System::Drawing::Size(1157, 598);
+		this->Controls->Add(this->textBox6);
+		this->Controls->Add(this->label12);
 		this->Controls->Add(this->textBox4);
 		this->Controls->Add(this->textBox3);
 		this->Controls->Add(this->label11);
@@ -481,6 +507,7 @@ public:
 		SetBackColor(label9);
 		SetBackColor(label10);
 		SetBackColor(label11);
+		SetBackColor(label12);
 		comboBox1->SelectedIndex = 0;
 
 		// ------------------------------------
@@ -521,9 +548,15 @@ public:
 	}
 
 	// param1 - X
+	// param2 - Y
 	double F(const double x, const double y)
 	{
-		return x + y;
+		if (x >= -1 && x <= 4 && y >= 1 && y <= 2)
+			return pow(sin(pow(x, 3)), 2) + y;
+		else if (x > -2 && x < -1 && y > 0 && y < 1)
+			return x - 3 + y;
+
+		return exp(x);
 	}
 
 	// return code (int)
@@ -675,6 +708,9 @@ public:
 		String^ fs;
 		String^ probel;
 
+		int countZ = 0;
+		double sumZ = 0.f, Z = 0.f;
+
 		while (cut_1.GetX() <= cut_1.GetY())
 		{
 			bool cout = true;
@@ -688,7 +724,15 @@ public:
 					probel = String('\t', fs->Length / 9).ToString();
 				}
 
-				fs = String::Format(probel + "\tY = {0:F" + countSymbols + "} \t Z = {1:F" + countSymbols + "}", cut_2.GetX(), F(cut_1.GetX(), cut_2.GetX()));
+				Z = F(cut_1.GetX(), cut_2.GetX());
+
+				if (abs(Z) > 0.1)
+				{
+					sumZ += abs(Z);
+					countZ++;
+				}
+
+				fs = String::Format(probel + "\tY = {0:F" + countSymbols + "} \t Z = {1:F" + countSymbols + "}", cut_2.GetX(), Z);
 				
 				cout = false;
 
@@ -700,6 +744,9 @@ public:
 
 			cut_1.AddX(h1);
 		}
+
+		textBox5->Text = countZ.ToString();
+		textBox6->Text = sumZ.ToString();
 	}
 
 	System::Void MyForm_MouseDown(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
