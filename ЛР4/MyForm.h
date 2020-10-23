@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 
 using namespace System;
 using namespace System::ComponentModel;
@@ -23,7 +23,7 @@ enum Code{
 	eOK,
 	eInput,
 	eStep,
-	eConvert
+	eConvert,
 };
 
 int countSymbols = 8;
@@ -65,13 +65,24 @@ private:
 	System::Windows::Forms::Label^  label6;
 	System::Windows::Forms::ListBox^  listBox1;
 	System::Windows::Forms::Label^  label5;
-	System::Windows::Forms::TextBox^  textBox4;
+private: System::Windows::Forms::TextBox^  textBox5;
+
+
 	System::Windows::Forms::Label^  label7;
 	System::Windows::Forms::NumericUpDown^  numericUpDown1;
 	System::Windows::Forms::Label^  label8;
 	System::Windows::Forms::Label^  label9;
 	System::Windows::Forms::ComboBox^  comboBox1;
-	System::ComponentModel::IContainer^  components;
+private: System::Windows::Forms::TextBox^  textBox4;
+private: System::Windows::Forms::TextBox^  textBox3;
+
+
+private: System::Windows::Forms::Label^  label11;
+private: System::Windows::Forms::Label^  label10;
+
+
+
+		 System::ComponentModel::IContainer^  components;
 
 public:
 	void InitializeComponent(void)
@@ -92,12 +103,16 @@ public:
 		this->label6 = (gcnew System::Windows::Forms::Label());
 		this->listBox1 = (gcnew System::Windows::Forms::ListBox());
 		this->label5 = (gcnew System::Windows::Forms::Label());
-		this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+		this->textBox5 = (gcnew System::Windows::Forms::TextBox());
 		this->label7 = (gcnew System::Windows::Forms::Label());
 		this->numericUpDown1 = (gcnew System::Windows::Forms::NumericUpDown());
 		this->label8 = (gcnew System::Windows::Forms::Label());
 		this->label9 = (gcnew System::Windows::Forms::Label());
 		this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
+		this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+		this->textBox3 = (gcnew System::Windows::Forms::TextBox());
+		this->label11 = (gcnew System::Windows::Forms::Label());
+		this->label10 = (gcnew System::Windows::Forms::Label());
 		this->panel1->SuspendLayout();
 		(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->BeginInit();
 		this->SuspendLayout();
@@ -111,7 +126,7 @@ public:
 		this->button1->Name = L"button1";
 		this->button1->Size = System::Drawing::Size(188, 27);
 		this->button1->TabIndex = 20;
-		this->button1->Text = L"Вычислить";
+		this->button1->Text = L"Р’С‹С‡РёСЃР»РёС‚СЊ";
 		this->button1->UseVisualStyleBackColor = false;
 		this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 		// 
@@ -122,9 +137,9 @@ public:
 		this->label2->ForeColor = System::Drawing::Color::DodgerBlue;
 		this->label2->Location = System::Drawing::Point(76, 207);
 		this->label2->Name = L"label2";
-		this->label2->Size = System::Drawing::Size(102, 20);
+		this->label2->Size = System::Drawing::Size(68, 20);
 		this->label2->TabIndex = 2;
-		this->label2->Text = L"Отрезок [A;B]";
+		this->label2->Text = L"X = [A;B]";
 		// 
 		// label3
 		// 
@@ -133,9 +148,9 @@ public:
 		this->label3->ForeColor = System::Drawing::Color::DodgerBlue;
 		this->label3->Location = System::Drawing::Point(76, 247);
 		this->label3->Name = L"label3";
-		this->label3->Size = System::Drawing::Size(49, 20);
+		this->label3->Size = System::Drawing::Size(57, 20);
 		this->label3->TabIndex = 3;
-		this->label3->Text = L"Шаг h";
+		this->label3->Text = L"РЁР°Рі h1";
 		// 
 		// textBox1
 		// 
@@ -143,7 +158,7 @@ public:
 		this->textBox1->Location = System::Drawing::Point(191, 204);
 		this->textBox1->Name = L"textBox1";
 		this->textBox1->Size = System::Drawing::Size(188, 27);
-		this->textBox1->TabIndex = 8;
+		this->textBox1->TabIndex = 1;
 		// 
 		// textBox2
 		// 
@@ -151,7 +166,7 @@ public:
 		this->textBox2->Location = System::Drawing::Point(191, 244);
 		this->textBox2->Name = L"textBox2";
 		this->textBox2->Size = System::Drawing::Size(188, 27);
-		this->textBox2->TabIndex = 9;
+		this->textBox2->TabIndex = 2;
 		// 
 		// panel1
 		// 
@@ -193,7 +208,7 @@ public:
 		this->NAME->Name = L"NAME";
 		this->NAME->Size = System::Drawing::Size(231, 25);
 		this->NAME->TabIndex = 17;
-		this->NAME->Text = L"Лабораторная работа #4";
+		this->NAME->Text = L"Р›Р°Р±РѕСЂР°С‚РѕСЂРЅР°СЏ СЂР°Р±РѕС‚Р° #4";
 		// 
 		// task
 		// 
@@ -203,8 +218,8 @@ public:
 		this->task->Name = L"task";
 		this->task->Size = System::Drawing::Size(315, 100);
 		this->task->TabIndex = 17;
-		this->task->Text = L"Задание:\r\nПостройте таблицу и найдите наименьшее \r\nзначение функции y=f(x) при из"
-			L"менении x \r\nна отрезке [a; b]c шагом h.\r\n\r\n";
+		this->task->Text = L"Р—Р°РґР°РЅРёРµ:\r\nРџРѕСЃС‚СЂРѕР№С‚Рµ С‚Р°Р±Р»РёС†Сѓ Рё РЅР°Р№РґРёС‚Рµ РЅР°РёРјРµРЅСЊС€РµРµ \r\nР·РЅР°С‡РµРЅРёРµ С„СѓРЅРєС†РёРё y=f(x) РїСЂРё РёР·"
+			L"РјРµРЅРµРЅРёРё x \r\nРЅР° РѕС‚СЂРµР·РєРµ [a; b]c С€Р°РіРѕРј h.\r\n\r\n";
 		// 
 		// descr
 		// 
@@ -225,7 +240,7 @@ public:
 		this->about->Name = L"about";
 		this->about->Size = System::Drawing::Size(128, 25);
 		this->about->TabIndex = 18;
-		this->about->Text = L"О программе";
+		this->about->Text = L"Рћ РїСЂРѕРіСЂР°РјРјРµ";
 		this->about->Click += gcnew System::EventHandler(this, &MyForm::about_Click);
 		// 
 		// label1
@@ -236,7 +251,7 @@ public:
 		this->label1->Name = L"label1";
 		this->label1->Size = System::Drawing::Size(148, 20);
 		this->label1->TabIndex = 25;
-		this->label1->Text = L"Начальные условия";
+		this->label1->Text = L"РќР°С‡Р°Р»СЊРЅС‹Рµ СѓСЃР»РѕРІРёСЏ";
 		// 
 		// label4
 		// 
@@ -246,17 +261,17 @@ public:
 		this->label4->Name = L"label4";
 		this->label4->Size = System::Drawing::Size(75, 20);
 		this->label4->TabIndex = 26;
-		this->label4->Text = L"Результат";
+		this->label4->Text = L"Р РµР·СѓР»СЊС‚Р°С‚";
 		// 
 		// label6
 		// 
 		this->label6->AutoSize = true;
 		this->label6->ForeColor = System::Drawing::Color::Gray;
-		this->label6->Location = System::Drawing::Point(187, 331);
+		this->label6->Location = System::Drawing::Point(187, 368);
 		this->label6->Name = L"label6";
-		this->label6->Size = System::Drawing::Size(89, 20);
+		this->label6->Size = System::Drawing::Size(90, 20);
 		this->label6->TabIndex = 28;
-		this->label6->Text = L"Format X | Y";
+		this->label6->Text = L"Format X | Z";
 		// 
 		// listBox1
 		// 
@@ -266,9 +281,9 @@ public:
 		this->listBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
 		this->listBox1->FormattingEnabled = true;
 		this->listBox1->ItemHeight = 20;
-		this->listBox1->Location = System::Drawing::Point(191, 351);
+		this->listBox1->Location = System::Drawing::Point(191, 391);
 		this->listBox1->Name = L"listBox1";
-		this->listBox1->Size = System::Drawing::Size(349, 200);
+		this->listBox1->Size = System::Drawing::Size(544, 160);
 		this->listBox1->TabIndex = 31;
 		// 
 		// label5
@@ -282,13 +297,13 @@ public:
 		this->label5->TabIndex = 32;
 		this->label5->Text = L"Y min";
 		// 
-		// textBox4
+		// textBox5
 		// 
-		this->textBox4->ForeColor = System::Drawing::Color::DodgerBlue;
-		this->textBox4->Location = System::Drawing::Point(547, 204);
-		this->textBox4->Name = L"textBox4";
-		this->textBox4->Size = System::Drawing::Size(188, 27);
-		this->textBox4->TabIndex = 11;
+		this->textBox5->ForeColor = System::Drawing::Color::DodgerBlue;
+		this->textBox5->Location = System::Drawing::Point(547, 204);
+		this->textBox5->Name = L"textBox5";
+		this->textBox5->Size = System::Drawing::Size(188, 27);
+		this->textBox5->TabIndex = 10;
 		// 
 		// label7
 		// 
@@ -298,7 +313,7 @@ public:
 		this->label7->Name = L"label7";
 		this->label7->Size = System::Drawing::Size(139, 20);
 		this->label7->TabIndex = 33;
-		this->label7->Text = L"Настройка вывода";
+		this->label7->Text = L"РќР°СЃС‚СЂРѕР№РєР° РІС‹РІРѕРґР°";
 		// 
 		// numericUpDown1
 		// 
@@ -321,7 +336,7 @@ public:
 		this->label8->Name = L"label8";
 		this->label8->Size = System::Drawing::Size(110, 40);
 		this->label8->TabIndex = 35;
-		this->label8->Text = L"Число знаков \r\nпосле запятой";
+		this->label8->Text = L"Р§РёСЃР»Рѕ Р·РЅР°РєРѕРІ \r\nРїРѕСЃР»Рµ Р·Р°РїСЏС‚РѕР№";
 		// 
 		// label9
 		// 
@@ -332,7 +347,7 @@ public:
 		this->label9->Name = L"label9";
 		this->label9->Size = System::Drawing::Size(95, 20);
 		this->label9->TabIndex = 36;
-		this->label9->Text = L"Разделитель";
+		this->label9->Text = L"Р Р°Р·РґРµР»РёС‚РµР»СЊ";
 		// 
 		// comboBox1
 		// 
@@ -350,6 +365,44 @@ public:
 		this->comboBox1->TabIndex = 37;
 		this->comboBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::comboBox1_SelectedIndexChanged);
 		// 
+		// textBox4
+		// 
+		this->textBox4->ForeColor = System::Drawing::Color::DodgerBlue;
+		this->textBox4->Location = System::Drawing::Point(191, 327);
+		this->textBox4->Name = L"textBox4";
+		this->textBox4->Size = System::Drawing::Size(188, 27);
+		this->textBox4->TabIndex = 4;
+		// 
+		// textBox3
+		// 
+		this->textBox3->ForeColor = System::Drawing::Color::DodgerBlue;
+		this->textBox3->Location = System::Drawing::Point(191, 287);
+		this->textBox3->Name = L"textBox3";
+		this->textBox3->Size = System::Drawing::Size(188, 27);
+		this->textBox3->TabIndex = 3;
+		// 
+		// label11
+		// 
+		this->label11->AutoSize = true;
+		this->label11->BackColor = System::Drawing::Color::Transparent;
+		this->label11->ForeColor = System::Drawing::Color::DodgerBlue;
+		this->label11->Location = System::Drawing::Point(76, 330);
+		this->label11->Name = L"label11";
+		this->label11->Size = System::Drawing::Size(57, 20);
+		this->label11->TabIndex = 39;
+		this->label11->Text = L"РЁР°Рі h2";
+		// 
+		// label10
+		// 
+		this->label10->AutoSize = true;
+		this->label10->BackColor = System::Drawing::Color::Transparent;
+		this->label10->ForeColor = System::Drawing::Color::DodgerBlue;
+		this->label10->Location = System::Drawing::Point(76, 290);
+		this->label10->Name = L"label10";
+		this->label10->Size = System::Drawing::Size(68, 20);
+		this->label10->TabIndex = 38;
+		this->label10->Text = L"Y = [C;D]";
+		// 
 		// MyForm
 		// 
 		this->AutoScaleDimensions = System::Drawing::SizeF(8, 20);
@@ -357,12 +410,16 @@ public:
 		this->BackColor = System::Drawing::Color::White;
 		this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
 		this->ClientSize = System::Drawing::Size(1157, 598);
+		this->Controls->Add(this->textBox4);
+		this->Controls->Add(this->textBox3);
+		this->Controls->Add(this->label11);
+		this->Controls->Add(this->label10);
 		this->Controls->Add(this->comboBox1);
 		this->Controls->Add(this->label9);
 		this->Controls->Add(this->label8);
 		this->Controls->Add(this->numericUpDown1);
 		this->Controls->Add(this->label7);
-		this->Controls->Add(this->textBox4);
+		this->Controls->Add(this->textBox5);
 		this->Controls->Add(this->label5);
 		this->Controls->Add(this->listBox1);
 		this->Controls->Add(this->label6);
@@ -386,7 +443,7 @@ public:
 		this->Name = L"MyForm";
 		this->ShowIcon = false;
 		this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-		this->Text = L"Лабораторная работа #2";
+		this->Text = L"Р›Р°Р±РѕСЂР°С‚РѕСЂРЅР°СЏ СЂР°Р±РѕС‚Р° #2";
 		this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 		this->panel1->ResumeLayout(false);
 		this->panel1->PerformLayout();
@@ -421,6 +478,9 @@ public:
 		SetBackColor(label6);
 		SetBackColor(label7);
 		SetBackColor(label8);
+		SetBackColor(label9);
+		SetBackColor(label10);
+		SetBackColor(label11);
 		comboBox1->SelectedIndex = 0;
 
 		// ------------------------------------
@@ -461,9 +521,9 @@ public:
 	}
 
 	// param1 - X
-	double F(double x)
+	double F(const double x, const double y)
 	{
-		return x + 1 / x;
+		return x + y;
 	}
 
 	// return code (int)
@@ -471,6 +531,9 @@ public:
 	{
 		// ------------------------------------
 		if (textBox1->Text->IndexOf(comboBox1->SelectedItem->ToString()) <= 0)
+			return Code::eInput;
+
+		if (textBox3->Text->IndexOf(comboBox1->SelectedItem->ToString()) <= 0)
 			return Code::eInput;
 
 		double h = 0.f;
@@ -486,12 +549,30 @@ public:
 				return Code::eConvert;
 		}
 
+		if (textBox3->Text->IndexOf(".") > 0 && textBox4->Text->IndexOf(".") > 0)
+		{
+			textBox3->Text = textBox3->Text->Replace(".", ",");
+			textBox4->Text = textBox4->Text->Replace(".", ",");
+
+			if (double::TryParse(textBox3->Text, h) ||
+				double::TryParse(textBox4->Text, h))
+				return Code::eConvert;
+		}
+
 		// ------------------------------------
 		if (textBox1->Text->IndexOf(".") > 0)
 		{
 			textBox1->Text = textBox1->Text->Replace(".", ",");
 
 			if (double::TryParse(textBox1->Text, h))
+				return Code::eConvert;
+		}
+
+		if (textBox3->Text->IndexOf(".") > 0)
+		{
+			textBox3->Text = textBox3->Text->Replace(".", ",");
+
+			if (double::TryParse(textBox3->Text, h))
 				return Code::eConvert;
 		}
 
@@ -504,8 +585,19 @@ public:
 				return Code::eConvert;
 		}
 
+		if (textBox4->Text->IndexOf(".") > 0)
+		{
+			textBox4->Text = textBox4->Text->Replace(".", ",");
+
+			if (double::TryParse(textBox4->Text, h))
+				return Code::eConvert;
+		}
+
 		// ------------------------------------
 		if (!double::TryParse(textBox2->Text, h))
+			return Code::eStep;
+
+		if (!double::TryParse(textBox4->Text, h))
 			return Code::eStep;
 
 		return eOK;
@@ -520,8 +612,8 @@ public:
 		case Code::eInput:
 		{
 			MessageBox::Show(
-				"Ошибка ввода отрезка [A;B].\nДанные нужно вводить согласно выбранному разделителю!",
-				"Ошибка",
+				"РћС€РёР±РєР° РІРІРѕРґР° РѕС‚СЂРµР·РєР° [X;Y].\nР”Р°РЅРЅС‹Рµ РЅСѓР¶РЅРѕ РІРІРѕРґРёС‚СЊ СЃРѕРіР»Р°СЃРЅРѕ РІС‹Р±СЂР°РЅРЅРѕРјСѓ СЂР°Р·РґРµР»РёС‚РµР»СЋ!",
+				"РћС€РёР±РєР°",
 				MessageBoxButtons::OK,
 				MessageBoxIcon::Error);
 			return;
@@ -530,8 +622,8 @@ public:
 		case Code::eStep:
 		{
 			MessageBox::Show(
-				"Ошибка ввода шага H.\nДопускатся использование только чисел.",
-				"Ошибка",
+				"РћС€РёР±РєР° РІРІРѕРґР° С€Р°РіР° H.\nР”РѕРїСѓСЃРєР°С‚СЃСЏ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ С‚РѕР»СЊРєРѕ С‡РёСЃРµР».",
+				"РћС€РёР±РєР°",
 				MessageBoxButtons::OK,
 				MessageBoxIcon::Error);
 			return;
@@ -540,8 +632,8 @@ public:
 		case Code::eConvert:
 		{
 			MessageBox::Show(
-				"Число с плавающей точкой отделяется запятой, а не точкой.\nАвтоматическая замена точки на запятую.\nПрограмма продолжает работу.",
-				"Предупреждение",
+				"Р§РёСЃР»Рѕ СЃ РїР»Р°РІР°СЋС‰РµР№ С‚РѕС‡РєРѕР№ РѕС‚РґРµР»СЏРµС‚СЃСЏ Р·Р°РїСЏС‚РѕР№, Р° РЅРµ С‚РѕС‡РєРѕР№.\nРђРІС‚РѕРјР°С‚РёС‡РµСЃРєР°СЏ Р·Р°РјРµРЅР° С‚РѕС‡РєРё РЅР° Р·Р°РїСЏС‚СѓСЋ.\nРџСЂРѕРіСЂР°РјРјР° РїСЂРѕРґРѕР»Р¶Р°РµС‚ СЂР°Р±РѕС‚Сѓ.",
+				"РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ",
 				MessageBoxButtons::OK,
 				MessageBoxIcon::Information);
 		}break;
@@ -551,43 +643,63 @@ public:
 		// ------------------------------------
 
 		array<String^>^ split = gcnew array<String^> {comboBox1->SelectedItem->ToString()};
-		array<String^>^ DATA = gcnew array<String^>{};
-		DATA = textBox1->Text->Split(split, StringSplitOptions::None);
+		array<String^>^ DATA_X = gcnew array<String^>{};
+		array<String^>^ DATA_Y = gcnew array<String^>{};
+		DATA_X = textBox1->Text->Split(split, StringSplitOptions::None);
+		DATA_Y = textBox3->Text->Split(split, StringSplitOptions::None);
 
-		String^ A = DATA[0];
-		String^ B = DATA[1];
+		String^ A = DATA_X[0];
+		String^ B = DATA_X[1];
 
-		double x = 0.f, y = 0.f;
-		double::TryParse(A, x);
-		double::TryParse(B, y);
+		String^ C = DATA_Y[0];
+		String^ D = DATA_Y[1];
 
-		double h = 2 * y + 1;
+		double x1 = 0.f, x2 = 0.f;
+		double y1 = 0.f, y2 = 0.f;
 
-		CCut cut(x, y);
+		double::TryParse(A, x1);
+		double::TryParse(B, x2);
 
-		double::TryParse(textBox2->Text, h);
-		double Y, min;
-		bool min_init = false;
+		double::TryParse(C, y1);
+		double::TryParse(D, y2);
 
-		while (cut.GetX() <= cut.GetY() + h)
+		double h1 = 2 * x2 + 1;
+		double h2 = 2 * y2 + 1;
+
+		CCut cut_1(x1, x2);
+		CCut cut_2(y1, y2);
+
+		double::TryParse(textBox2->Text, h1);
+		double::TryParse(textBox4->Text, h2);
+
+		String^ fs;
+		String^ probel;
+
+		while (cut_1.GetX() <= cut_1.GetY())
 		{
-			Y = F(cut.GetX());
-
-			if (!min_init)
+			bool cout = true;
+			probel = String(' ', 0).ToString();
+			while (cut_2.GetX() <= cut_2.GetY())
 			{
-				min = Y;
-				min_init = !min_init;
+				if (cout)
+				{
+					fs = String::Format("x = {0:F" + countSymbols + "}", cut_1.GetX());
+					listBox1->Items->Add(fs);
+					probel = String('\t', fs->Length / 9).ToString();
+				}
+
+				fs = String::Format(probel + "\tY = {0:F" + countSymbols + "} \t Z = {1:F" + countSymbols + "}", cut_2.GetX(), F(cut_1.GetX(), cut_2.GetX()));
+				
+				cout = false;
+
+				listBox1->Items->Add(fs);
+
+				cut_2.AddX(h2);
 			}
+			cut_2.SetX(y1);
 
-			if (Y < min)
-				min = Y;
-
-			auto fs = String::Format("{0,2:D1}\t{1,2:F" + countSymbols + "}\t{2,2:F" + countSymbols + "}\t", listBox1->Items->Count, cut.GetX(), Y);
-			listBox1->Items->Add(fs);
-			cut.AddX(h);
+			cut_1.AddX(h1);
 		}
-
-		textBox4->Text = min.ToString();
 	}
 
 	System::Void MyForm_MouseDown(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
@@ -639,16 +751,18 @@ public:
 	}
 
 	System::Void about_Click(System::Object^  sender, System::EventArgs^  e) {
-		MessageBox::Show("Задание выполнил : \nb4d1k", "Подробнее о работе");
+		MessageBox::Show("Р—Р°РґР°РЅРёРµ РІС‹РїРѕР»РЅРёР» : \nb4d1k", "РџРѕРґСЂРѕР±РЅРµРµ Рѕ СЂР°Р±РѕС‚Рµ");
 	}
 
 	System::Void numericUpDown1_ValueChanged(System::Object^  sender, System::EventArgs^  e) {
 		countSymbols = Convert::ToInt32(numericUpDown1->Value);
 
 		if (countSymbols > 14)
-			this->listBox1->Size = System::Drawing::Size(469, 200);
+			this->listBox1->Size = System::Drawing::Size(666, 180);
+		else if (countSymbols > 12)
+			this->listBox1->Size = System::Drawing::Size(620, 180);
 		else
-			this->listBox1->Size = System::Drawing::Size(349, 200);
+			this->listBox1->Size = System::Drawing::Size(544, 180);
 
 	}
 	System::Void comboBox1_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
