@@ -446,12 +446,12 @@ public:
 
 	// param1 - число
 	// param2 - степень
-	double F(double x, double n)
+	double F(const double x, const double n)
 	{
 		return (pow(-1, n + 1) * (pow(x, (2 * n + 1)) / (4 * pow(n, 2) - 1)));
 	}
 
-	double Fx(double x, double n)
+	double Fx(const double x, const double n)
 	{
 		return (pow(-1, n + 1) * pow(x, 2 * n + 1) * (2 * n + 1)) / (x*(4 * pow(n,2) - 1));
 	}

@@ -65,22 +65,18 @@ private:
 	System::Windows::Forms::Label^  label6;
 	System::Windows::Forms::ListBox^  listBox1;
 	System::Windows::Forms::Label^  label5;
-private: System::Windows::Forms::TextBox^  textBox5;
-
-
+	System::Windows::Forms::TextBox^  textBox5;
 	System::Windows::Forms::Label^  label7;
 	System::Windows::Forms::NumericUpDown^  numericUpDown1;
 	System::Windows::Forms::Label^  label8;
 	System::Windows::Forms::Label^  label9;
 	System::Windows::Forms::ComboBox^  comboBox1;
-private: System::Windows::Forms::TextBox^  textBox4;
-private: System::Windows::Forms::TextBox^  textBox3;
-
-
-private: System::Windows::Forms::Label^  label11;
-private: System::Windows::Forms::Label^  label10;
-private: System::Windows::Forms::Label^  label12;
-private: System::Windows::Forms::TextBox^  textBox6;
+	System::Windows::Forms::TextBox^  textBox4;
+	System::Windows::Forms::TextBox^  textBox3;
+	System::Windows::Forms::Label^  label11;
+	System::Windows::Forms::Label^  label10;
+	System::Windows::Forms::Label^  label12;
+	System::Windows::Forms::TextBox^  textBox6;
 
 
 

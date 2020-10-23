@@ -461,7 +461,7 @@ public:
 	}
 
 	// param1 - X
-	double F(double x)
+	double F(const double x)
 	{
 		return x + 1 / x;
 	}
